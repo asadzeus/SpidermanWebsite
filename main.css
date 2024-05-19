@@ -4,8 +4,11 @@
     font-family: 'Courier New', Courier, monospace;
     font-size: large;
     font-weight: 700;
-    overflow: hidden;
+    
 }
+body::-webkit-scrollbar {
+    display: none;
+  }
 
 body{
     background-color: rgb(11, 21, 89);
@@ -25,6 +28,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: fixed;
+    z-index: 999;
 }
 
 ul{
@@ -46,10 +51,9 @@ li:hover{
     transform: scale(1.2, 1.2);
 }
 
-.midsec{
-    margin-top: 170px;
-    height: 400px;
-    width: 50%;
+.sec1{
+    height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -65,6 +69,7 @@ li:hover{
 }
 
 .texts1{
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -97,7 +102,7 @@ li:hover{
     border: 5px solid white;
     color: white;
     border-radius: 20px;
-    margin: 20px;
+    margin-top: 50px;
     padding: 15px 25px;
     cursor: pointer;
     transition: .3s;
@@ -116,4 +121,22 @@ li:hover{
     width: 100%;
     height: 100%;
     pointer-events: none;
+}
+
+.sec2{
+    border-top: 5px dashed white;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#webimg{
+    position: absolute;
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    pointer-events: none; /* Makes the image not interfere with further clicks */
+    transform: translate(-50%, -50%);;
 }
